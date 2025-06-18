@@ -31,6 +31,6 @@ public class Ballrow {
 
     private void search(int number){
         deMark(); // entfernt alle Markierungen
-
+        // TODO: Suchmethode implementieren
     }
 }
