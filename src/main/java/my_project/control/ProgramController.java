@@ -1,7 +1,8 @@
 package my_project.control;
 
 import KAGO_framework.control.ViewController;
-import my_project.model.House;
+import my_project.model.Ball;
+import my_project.model.Ballrow;
 
 /**
  * Ein Objekt der Klasse ProgramController dient dazu das Programm zu steuern.
@@ -18,7 +19,7 @@ public class ProgramController {
 
     // Referenzen
     private final ViewController viewController;  // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
-    private House firstHouse; // deklariert eine Referenz für ein Objekt der Klasse House
+    private Ballrow myBallrow ; // deklariert eine Referenz für ein Objekt der Klasse House
 
     /**
      * Konstruktor
@@ -36,10 +37,7 @@ public class ProgramController {
      * was zu diesem Zeipunkt passieren muss.
      */
     public void startProgram() {
-        // Erstelle ein Objekt der Klasse House und initialisiere damit die Referenz house1
-        firstHouse = new House();
-        // Teile dem ViewController-Objekt mit, dass das House-Objekt gezeichnet werden soll
-        viewController.draw(firstHouse);
+        myBallrow = new Ballrow(20,viewController);
     }
 
     /**
